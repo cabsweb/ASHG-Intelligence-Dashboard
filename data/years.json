@@ -39,7 +39,9 @@
         {"title": "Translation broadens", "body": "Therapeutic target selection, population screening, public trust, global implementation, and policy appear alongside discovery science."}
       ],
       "sources": [
-        {"type": "PDF", "title": "2026 Program at a Glance", "description": "Session titles, dates, formats, and presentation details.", "url": "https://www.ashg.org/wp-content/uploads/2026/10/2026-ASHG-Program-at-a-Glance.pdf"},
+        {"type": "PDF · ARCHIVED", "title": "2026 Program at a Glance", "description": "Repository copy of session titles, dates, formats, and presentation details.", "url": "assets/sources/2026/ASHG-2026-Program-at-a-Glance.pdf", "originalUrl": "https://www.ashg.org/wp-content/uploads/2026/10/2026-ASHG-Program-at-a-Glance.pdf", "archived": true},
+        {"type": "PDF · ARCHIVED", "title": "CE-Eligible GenomeCast Sessions", "description": "Repository copy of the official continuing-education session list.", "url": "assets/sources/2026/ASHG-2026-CE-Eligible-Sessions-GenomeCast.pdf", "originalUrl": "https://www.ashg.org/wp-content/uploads/2026/10/2026-CE-Eligible-Sessions-GenomeCast.pdf", "archived": true},
+        {"type": "PDF · ARCHIVED", "title": "Annual Meeting Learner Notification", "description": "Repository copy of the official accreditation and disclosure document.", "url": "assets/sources/2026/ASHG-2026-Learner-Notification.pdf", "originalUrl": "https://www.ashg.org/wp-content/uploads/2026/10/10.20.2026-Annual-Meeting-LN.pdf", "archived": true},
         {"type": "WEB", "title": "GenomeCast schedule", "description": "Highlighted sessions and on-demand program selection.", "url": "https://ashgmeeting.ashg.org/attend/genomecast/"},
         {"type": "WEB", "title": "ASHG 2026 meeting page", "description": "Official event scale, venue, and meeting overview.", "url": "https://www.ashg.org/annual-meeting-2026"},
         {"type": "WEB", "title": "ASHG press announcement", "description": "Meeting context and selected program highlights.", "url": "https://www.ashg.org/publications-news/press-releases/ashg-2026-press-registration-announcement/"}

@@ -1,0 +1,33 @@
+{
+  "year": 2026,
+  "retrievedAt": "2026-11-08T11:51:37-08:00",
+  "scope": "Official PDF/XLSX documents directly linked by the dashboard's primary ASHG source pages, plus the official annual-meeting learner notification discovered during the archive review.",
+  "xlsxDiscovered": 0,
+  "notes": "No XLS or XLSX files were linked or indexed in the reviewed 2026 dashboard sources at retrieval time. Add any subsequently discovered spreadsheets here before relying on the external URL.",
+  "files": [
+    {
+      "title": "ASHG 2026 Program at a Glance",
+      "format": "PDF",
+      "localPath": "ASHG-2026-Program-at-a-Glance.pdf",
+      "originalUrl": "https://www.ashg.org/wp-content/uploads/2026/10/2026-ASHG-Program-at-a-Glance.pdf",
+      "bytes": 410921,
+      "sha256": "311f9a3edea31a8039b3e4770a11a330af67d7857f890b70d625bcf51d16a9ac"
+    },
+    {
+      "title": "ASHG 2026 CE-Eligible GenomeCast Sessions",
+      "format": "PDF",
+      "localPath": "ASHG-2026-CE-Eligible-Sessions-GenomeCast.pdf",
+      "originalUrl": "https://www.ashg.org/wp-content/uploads/2026/10/2026-CE-Eligible-Sessions-GenomeCast.pdf",
+      "bytes": 96695,
+      "sha256": "4887de3a3e1ba9c395cc8927070b17b45f67fb250f6259143b2861224ca62cd3"
+    },
+    {
+      "title": "ASHG 2026 Annual Meeting Learner Notification",
+      "format": "PDF",
+      "localPath": "ASHG-2026-Learner-Notification.pdf",
+      "originalUrl": "https://www.ashg.org/wp-content/uploads/2026/10/10.20.2026-Annual-Meeting-LN.pdf",
+      "bytes": 649888,
+      "sha256": "637603133f990dd86b8f451db4d4955a10befe8c9431574c6666f0e53c2f22c3"
+    }
+  ]
+}
