@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CABS intelligence dashboard for strategic signals from the ASHG 2026 Annual Meeting.">
+  <meta name="theme-color" content="#171126">
+  <title>ASHG Intelligence | CABS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to intelligence</a>
+  <div class="ambient ambient-a" aria-hidden="true"></div>
+  <div class="ambient ambient-b" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="ASHG Intelligence home">
+      <span class="brand-mark">A</span>
+      <span><strong>ASHG Intelligence</strong><small>by CABS</small></span>
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="#overview">Overview</a>
+      <a href="#signals">Signals</a>
+      <a href="#themes">Themes</a>
+      <a href="#sources">Sources</a>
+    </nav>
+    <button class="icon-button" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch color theme">Theme</button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="overview">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="live-dot"></span> Post-meeting intelligence brief · <span class="nowrap">ASHG 2026</span></p>
+        <h1>Where human genetics is <span>moving next.</span></h1>
+        <p class="lede">A decision-ready view of scientific, translational, and policy signals from the ASHG 2026 program—curated for CABS members and biotech leaders.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#signals">Explore signals <span>→</span></a>
+          <a class="button secondary" href="https://www.ashg.org/wp-content/uploads/2026/10/2026-ASHG-Program-at-a-Glance.pdf" target="_blank" rel="noreferrer">Official program ↗</a>
+        </div>
+        <p class="meta"><span>20–24 October 2026</span> · <span>Montréal, Canada</span> · <span>Updated <time datetime="2026-11-08">8 Nov 2026</time></span></p>
+      </div>
+      <aside class="hero-panel" aria-label="Meeting scale">
+        <div class="panel-head"><span>Meeting scale</span><span class="status">Official</span></div>
+        <div class="kpi-grid">
+          <div><strong>7,500+</strong><span>attendees</span></div>
+          <div><strong>75</strong><span>countries</span></div>
+          <div><strong>100+</strong><span>scientific sessions</span></div>
+          <div><strong>240</strong><span>exhibitors & sponsors</span></div>
+        </div>
+        <div class="signal-strip">
+          <span>Signal density</span>
+          <div class="mini-bars" id="miniBars" aria-label="Signal count by theme"></div>
+        </div>
+        <p class="panel-note">Scale figures reported by ASHG. Signal counts reflect this dashboard’s curated dataset—not the full program.</p>
+      </aside>
+    </section>
+
+    <section class="brief" aria-labelledby="brief-title">
+      <div>
+        <p class="section-kicker">Executive readout</p>
+        <h2 id="brief-title">Three shifts to watch</h2>
+      </div>
+      <div class="brief-grid">
+        <article><span class="ordinal">01</span><h3>AI moves into evidence workflows</h3><p>The agenda pairs foundation models and agents with calibration, independent evaluation, and clinical interpretation—not only prediction.</p></article>
+        <article><span class="ordinal">02</span><h3>Scale meets resolution</h3><p>Million-person biobanks are converging with long reads, isoform-aware analysis, single-cell data, and functional assays.</p></article>
+        <article><span class="ordinal">03</span><h3>Translation broadens</h3><p>Therapeutic target selection, population screening, public trust, global implementation, and policy appear alongside discovery science.</p></article>
+      </div>
+    </section>
+
+    <section class="signals-section" id="signals" aria-labelledby="signals-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">Curated evidence</p><h2 id="signals-title">Strategic signal board</h2></div>
+        <p><span id="resultCount">0</span> signals shown</p>
+      </div>
+      <div class="controls" aria-label="Signal filters">
+        <label class="search"><span aria-hidden="true">⌕</span><input id="searchInput" type="search" placeholder="Search signals, implications, sessions…" autocomplete="off"></label>
+        <div class="filter-row" id="themeFilters" role="group" aria-label="Filter by theme"></div>
+        <select id="priorityFilter" aria-label="Filter by priority">
+          <option value="all">All priorities</option>
+          <option value="Act now">Act now</option>
+          <option value="Watch">Watch</option>
+          <option value="Explore">Explore</option>
+        </select>
+      </div>
+      <div id="signalGrid" class="signal-grid" aria-live="polite"></div>
+      <div id="emptyState" class="empty-state" hidden><strong>No matching signals</strong><span>Try another theme or a broader search.</span></div>
+    </section>
+
+    <section class="themes-section" id="themes" aria-labelledby="themes-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">Portfolio view</p><h2 id="themes-title">Theme concentration</h2></div>
+        <p>Share of curated signals</p>
+      </div>
+      <div class="theme-layout">
+        <div class="theme-chart" id="themeChart"></div>
+        <div class="action-panel">
+          <p class="section-kicker">CABS action lens</p>
+          <h3>Turn conference signals into member value</h3>
+          <ul>
+            <li><span>01</span><div><strong>Convene</strong><p>Pair AI developers, clinical geneticists, and translational leaders around evaluation standards.</p></div></li>
+            <li><span>02</span><div><strong>Translate</strong><p>Convert emerging methods into practical primers, case studies, and implementation playbooks.</p></div></li>
+            <li><span>03</span><div><strong>Connect</strong><p>Map CABS expertise to the highest-density themes for panels, partnerships, and mentorship.</p></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources-section" id="sources" aria-labelledby="sources-title">
+      <div class="section-heading">
+        <div><p class="section-kicker">Provenance</p><h2 id="sources-title">Source ledger</h2></div>
+        <p>Primary sources only</p>
+      </div>
+      <div class="source-grid">
+        <a href="https://www.ashg.org/wp-content/uploads/2026/10/2026-ASHG-Program-at-a-Glance.pdf" target="_blank" rel="noreferrer"><span>01 · PDF</span><strong>2026 Program at a Glance</strong><p>Session titles, dates, formats, and presentation details.</p><b>Open source ↗</b></a>
+        <a href="https://ashgmeeting.ashg.org/attend/genomecast/" target="_blank" rel="noreferrer"><span>02 · WEB</span><strong>GenomeCast schedule</strong><p>Highlighted sessions and on-demand program selection.</p><b>Open source ↗</b></a>
+        <a href="https://www.ashg.org/annual-meeting-2026" target="_blank" rel="noreferrer"><span>03 · WEB</span><strong>ASHG 2026 meeting page</strong><p>Official event scale, venue, and meeting overview.</p><b>Open source ↗</b></a>
+        <a href="https://www.ashg.org/publications-news/press-releases/ashg-2026-press-registration-announcement/" target="_blank" rel="noreferrer"><span>04 · WEB</span><strong>ASHG press announcement</strong><p>Meeting context and selected program highlights.</p><b>Open source ↗</b></a>
+      </div>
+      <div class="methodology"><strong>Methodology</strong><p>This is a curated intelligence layer, not a bibliometric analysis or complete program index. “Signal” and “priority” labels are editorial judgments by CABS. Every card links to an official ASHG source; implications and suggested actions are clearly separated from source evidence.</p></div>
+    </section>
+  </main>
+
+  <footer><div><strong>ASHG Intelligence</strong><span>A CABS open intelligence resource.</span></div><div><a href="https://cabsweb.org">cabsweb.org</a><a href="https://github.com/cabsweb/ASHG-Intelligence-Dashboard">GitHub</a><span>© 2026 CABS</span></div></footer>
+  <script src="app.js" defer></script>
+</body>
+</html>
