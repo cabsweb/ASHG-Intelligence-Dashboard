@@ -87,7 +87,7 @@ async function loadYear(item,{updateUrl=true}={}){
   if(updateUrl){const url=new URL(location.href);url.searchParams.set('year',item.year);history.replaceState({},'',url)}
   updateHero(item);renderNotice(item);
   if(item.status!=='published')return;
-  const response=await fetch(`${item.data}?v=3`);
+  const response=await fetch(`${item.data}?v=4`);
   if(!response.ok)throw new Error(`Signal data returned HTTP ${response.status}`);
   state.signals=await response.json();
   renderReadout(item);renderSources(item);renderFilters();renderSignals();renderThemes();
@@ -96,7 +96,7 @@ async function loadYear(item,{updateUrl=true}={}){
 async function init(){
   setupTheme();
   try{
-    const response=await fetch('data/years.json?v=3');
+    const response=await fetch('data/years.json?v=4');
     if(!response.ok)throw new Error(`Year manifest returned HTTP ${response.status}`);
     state.manifest=await response.json();
     const requested=Number(new URL(location.href).searchParams.get('year'));
