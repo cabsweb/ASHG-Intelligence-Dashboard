@@ -1,10 +1,11 @@
 # ASHG Intelligence Dashboard
 
-A public, source-grounded intelligence dashboard that translates the ASHG 2026 Annual Meeting program into decision-ready signals for CABS members and biotech leaders.
+A public, source-grounded annual intelligence dashboard that translates ASHG meeting programs into decision-ready signals for CABS members and biotech leaders.
 
 ## Features
 
-- 12 curated scientific, translational, clinical, and policy signals
+- Year selector with published, backfill, and upcoming coverage states
+- 12 curated 2026 scientific, translational, clinical, and policy signals
 - Search plus theme and priority filters
 - Evidence, implications, and suggested CABS actions kept distinct
 - Direct links to primary ASHG sources on every signal
@@ -19,9 +20,27 @@ python3 -m http.server 8000
 
 Open `http://localhost:8000`.
 
-## Data model
+## Annual data model
 
-Dashboard content lives in [`data/signals.json`](data/signals.json). Each record contains source evidence, an editorial implication, a suggested action, program metadata, and a primary-source URL.
+[`data/years.json`](data/years.json) is the coverage manifest. It defines each year's status, meeting metadata, official sources, executive readout, and signal-data path. Published signal records live under `data/<year>/signals.json`.
+
+Current coverage:
+
+| Year | State | Purpose |
+|---|---|---|
+| 2025 | Backfill planned | Source-grounded historical retrospective |
+| 2026 | Published | Complete initial intelligence brief |
+| 2027 | Upcoming watch | Rolling capture when official materials appear |
+
+## Add or update a year
+
+1. Add or update the year entry in `data/years.json`.
+2. Collect official ASHG sources and record them in that entry's source ledger.
+3. Create `data/<year>/signals.json` using the same schema as the 2026 dataset.
+4. Set the entry's `status` to `published` and add its `data` path, scale metrics, readout, and sources.
+5. Run the local server and verify the year selector, filters, links, mobile layout, and source provenance before publishing.
+
+Never copy scale metrics or interpretations across years without year-specific evidence.
 
 ## Methodology
 

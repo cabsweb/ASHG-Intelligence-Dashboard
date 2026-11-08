@@ -27,22 +27,25 @@
       <a href="#themes">Themes</a>
       <a href="#sources">Sources</a>
     </nav>
-    <button class="icon-button" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch color theme">Theme</button>
+    <div class="header-actions">
+      <label class="year-picker"><span>Year</span><select id="yearSelect" aria-label="Select ASHG intelligence year"></select></label>
+      <button class="icon-button" id="themeToggle" type="button" aria-label="Switch color theme" title="Switch color theme">Theme</button>
+    </div>
   </header>
 
   <main id="main">
     <section class="hero" id="overview">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="live-dot"></span> Post-meeting intelligence brief · <span class="nowrap">ASHG 2026</span></p>
-        <h1>Where human genetics is <span>moving next.</span></h1>
-        <p class="lede">A decision-ready view of scientific, translational, and policy signals from the ASHG 2026 program—curated for CABS members and biotech leaders.</p>
+        <p class="eyebrow" id="heroEyebrow"><span class="live-dot"></span> Post-meeting intelligence brief · <span class="nowrap">ASHG 2026</span></p>
+        <h1 id="heroTitle">Where human genetics is <span>moving next.</span></h1>
+        <p class="lede" id="heroLede">A decision-ready view of scientific, translational, and policy signals from the ASHG 2026 program—curated for CABS members and biotech leaders.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#signals">Explore signals <span>→</span></a>
-          <a class="button secondary" href="https://www.ashg.org/wp-content/uploads/2026/10/2026-ASHG-Program-at-a-Glance.pdf" target="_blank" rel="noreferrer">Official program ↗</a>
+          <a class="button primary" id="exploreLink" href="#signals">Explore signals <span>→</span></a>
+          <a class="button secondary" id="officialLink" href="https://www.ashg.org/wp-content/uploads/2026/10/2026-ASHG-Program-at-a-Glance.pdf" target="_blank" rel="noreferrer">Official source ↗</a>
         </div>
-        <p class="meta"><span>20–24 October 2026</span> · <span>Montréal, Canada</span> · <span>Updated <time datetime="2026-11-08">8 Nov 2026</time></span></p>
+        <p class="meta" id="heroMeta"><span>20–24 October 2026</span> · <span>Montréal, Canada</span> · <span>Updated 8 Nov 2026</span></p>
       </div>
-      <aside class="hero-panel" aria-label="Meeting scale">
+      <aside class="hero-panel" id="heroPanel" aria-label="Meeting scale">
         <div class="panel-head"><span>Meeting scale</span><span class="status">Official</span></div>
         <div class="kpi-grid">
           <div><strong>7,500+</strong><span>attendees</span></div>
@@ -58,19 +61,21 @@
       </aside>
     </section>
 
-    <section class="brief" aria-labelledby="brief-title">
+    <section class="year-notice" id="yearNotice" hidden aria-live="polite"></section>
+
+    <section class="brief annual-content" id="briefSection" aria-labelledby="brief-title">
       <div>
         <p class="section-kicker">Executive readout</p>
         <h2 id="brief-title">Three shifts to watch</h2>
       </div>
-      <div class="brief-grid">
+      <div class="brief-grid" id="briefGrid">
         <article><span class="ordinal">01</span><h3>AI moves into evidence workflows</h3><p>The agenda pairs foundation models and agents with calibration, independent evaluation, and clinical interpretation—not only prediction.</p></article>
         <article><span class="ordinal">02</span><h3>Scale meets resolution</h3><p>Million-person biobanks are converging with long reads, isoform-aware analysis, single-cell data, and functional assays.</p></article>
         <article><span class="ordinal">03</span><h3>Translation broadens</h3><p>Therapeutic target selection, population screening, public trust, global implementation, and policy appear alongside discovery science.</p></article>
       </div>
     </section>
 
-    <section class="signals-section" id="signals" aria-labelledby="signals-title">
+    <section class="signals-section annual-content" id="signals" aria-labelledby="signals-title">
       <div class="section-heading">
         <div><p class="section-kicker">Curated evidence</p><h2 id="signals-title">Strategic signal board</h2></div>
         <p><span id="resultCount">0</span> signals shown</p>
@@ -89,7 +94,7 @@
       <div id="emptyState" class="empty-state" hidden><strong>No matching signals</strong><span>Try another theme or a broader search.</span></div>
     </section>
 
-    <section class="themes-section" id="themes" aria-labelledby="themes-title">
+    <section class="themes-section annual-content" id="themes" aria-labelledby="themes-title">
       <div class="section-heading">
         <div><p class="section-kicker">Portfolio view</p><h2 id="themes-title">Theme concentration</h2></div>
         <p>Share of curated signals</p>
@@ -108,12 +113,12 @@
       </div>
     </section>
 
-    <section class="sources-section" id="sources" aria-labelledby="sources-title">
+    <section class="sources-section annual-content" id="sources" aria-labelledby="sources-title">
       <div class="section-heading">
         <div><p class="section-kicker">Provenance</p><h2 id="sources-title">Source ledger</h2></div>
         <p>Primary sources only</p>
       </div>
-      <div class="source-grid">
+      <div class="source-grid" id="sourceGrid">
         <a href="https://www.ashg.org/wp-content/uploads/2026/10/2026-ASHG-Program-at-a-Glance.pdf" target="_blank" rel="noreferrer"><span>01 · PDF</span><strong>2026 Program at a Glance</strong><p>Session titles, dates, formats, and presentation details.</p><b>Open source ↗</b></a>
         <a href="https://ashgmeeting.ashg.org/attend/genomecast/" target="_blank" rel="noreferrer"><span>02 · WEB</span><strong>GenomeCast schedule</strong><p>Highlighted sessions and on-demand program selection.</p><b>Open source ↗</b></a>
         <a href="https://www.ashg.org/annual-meeting-2026" target="_blank" rel="noreferrer"><span>03 · WEB</span><strong>ASHG 2026 meeting page</strong><p>Official event scale, venue, and meeting overview.</p><b>Open source ↗</b></a>

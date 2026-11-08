@@ -1,0 +1,64 @@
+{
+  "defaultYear": 2026,
+  "years": [
+    {
+      "year": 2027,
+      "status": "upcoming",
+      "statusLabel": "Upcoming watch",
+      "eyebrow": "Forward intelligence watch · ASHG 2027",
+      "title": "Tracking what comes next in 2027.",
+      "lede": "The 2027 workspace is ready for rolling updates as official programs, abstracts, and meeting signals become available.",
+      "eventDate": "26–30 October 2027",
+      "location": "Nashville, Tennessee",
+      "updated": "Monitoring begins when official materials are released",
+      "phase": "Monitoring",
+      "nextMilestone": "Add official program sources and begin rolling signal capture",
+      "officialUrl": "https://www.ashg.org/meetings/future-past"
+    },
+    {
+      "year": 2026,
+      "status": "published",
+      "statusLabel": "Published",
+      "eyebrow": "Post-meeting intelligence brief · ASHG 2026",
+      "title": "Where human genetics is moving next.",
+      "titleAccent": "moving next.",
+      "lede": "A decision-ready view of scientific, translational, and policy signals from the ASHG 2026 program—curated for CABS members and biotech leaders.",
+      "eventDate": "20–24 October 2026",
+      "location": "Montréal, Canada",
+      "updated": "8 Nov 2026",
+      "data": "data/2026/signals.json",
+      "scale": [
+        {"value": "7,500+", "label": "attendees"},
+        {"value": "75", "label": "countries"},
+        {"value": "100+", "label": "scientific sessions"},
+        {"value": "240", "label": "exhibitors & sponsors"}
+      ],
+      "readout": [
+        {"title": "AI moves into evidence workflows", "body": "The agenda pairs foundation models and agents with calibration, independent evaluation, and clinical interpretation—not only prediction."},
+        {"title": "Scale meets resolution", "body": "Million-person biobanks are converging with long reads, isoform-aware analysis, single-cell data, and functional assays."},
+        {"title": "Translation broadens", "body": "Therapeutic target selection, population screening, public trust, global implementation, and policy appear alongside discovery science."}
+      ],
+      "sources": [
+        {"type": "PDF", "title": "2026 Program at a Glance", "description": "Session titles, dates, formats, and presentation details.", "url": "https://www.ashg.org/wp-content/uploads/2026/10/2026-ASHG-Program-at-a-Glance.pdf"},
+        {"type": "WEB", "title": "GenomeCast schedule", "description": "Highlighted sessions and on-demand program selection.", "url": "https://ashgmeeting.ashg.org/attend/genomecast/"},
+        {"type": "WEB", "title": "ASHG 2026 meeting page", "description": "Official event scale, venue, and meeting overview.", "url": "https://www.ashg.org/annual-meeting-2026"},
+        {"type": "WEB", "title": "ASHG press announcement", "description": "Meeting context and selected program highlights.", "url": "https://www.ashg.org/publications-news/press-releases/ashg-2026-press-registration-announcement/"}
+      ],
+      "officialUrl": "https://www.ashg.org/annual-meeting-2026"
+    },
+    {
+      "year": 2025,
+      "status": "backfill",
+      "statusLabel": "Backfill planned",
+      "eyebrow": "Historical intelligence archive · ASHG 2025",
+      "title": "Building the 2025 intelligence record.",
+      "lede": "The 2025 archive is reserved for a source-grounded retrospective using official program materials and clearly dated evidence.",
+      "eventDate": "14–18 October 2025",
+      "location": "Boston, Massachusetts",
+      "updated": "Backfill planned",
+      "phase": "Source collection",
+      "nextMilestone": "Collect the official program, validate meeting facts, and curate retrospective signals",
+      "officialUrl": "https://www.ashg.org/meetings/future-past"
+    }
+  ]
+}
